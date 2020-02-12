@@ -5,6 +5,8 @@ import { AdminComponent } from './admin';
 import { LoginComponent } from './login';
 import { AuthGuard } from './_helpers';
 import { Role } from './_models';
+import { CompanyListComponent } from './company-list/company-list.component';
+import { CompanyDetailComponent } from './company-detail/company-detail.component';
 
 const routes: Routes = [
     {
@@ -21,6 +23,16 @@ const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path:'companylist',
+        component:CompanyListComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path:'companydetail',
+        component:CompanyDetailComponent,
+        canActivate: [AuthGuard]
     },
 
     // otherwise redirect to home

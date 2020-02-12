@@ -1,0 +1,36 @@
+<!--==========================
+    Get Started Section
+  ============================-->
+  <section id="get-started" class="padd-section wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title-2">
+          <h3 class="resultSearch">Companies - {{companylist.length}}</h3>
+          
+      </div>
+    </div>
+    <!-- <div class="sectionLine"></div> -->
+    <div class="container text-center">
+      <div class="row">
+
+        <div class="col-sm-12 col-lg-4" *ngFor="let company of companylist">
+          <div class="feature-block features">
+
+            <div class="col-12 vendor">
+              <img [src]="company._logo" alt="img" class="img-fluid">
+            </div>
+            
+            <h4>{{company._name}}</h4>
+            <p>{{company._about}}</p>
+            <a [routerLink]="['/companydetail']" [state]="company">read more</a>
+
+          </div>
+        </div>
+
+
+  
+  
+      </div>
+    </div>
+
+  </section>

@@ -1,0 +1,26 @@
+<header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a [routerLink]="['/home']" class="scrollto"><span>c</span>Logo</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a [routerLink]="['about-us']">About</a></li>
+          <li><a [routerLink]="['contact']">Contact</a></li>
+          <li><a [routerLink]="['login']" *ngIf="loginState == undefined" >Login</a></li>
+          <li><a [routerLink]="['login']" *ngIf="loginState != undefined" (click)="logout()">Logout</a></li>
+
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+<!-- nav -->
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" routerLink="/admin" *ngIf="isAdmin">Admin</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav> -->

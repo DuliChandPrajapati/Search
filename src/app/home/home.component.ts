@@ -1,8 +1,10 @@
 ﻿import { Component } from '@angular/core';
 import { first } from 'rxjs/operators';
 
+
 import { User } from '@app/_models';
 import { UserService, AuthenticationService } from '@app/_services';
+import { Router } from '@angular/router';
 
 @Component({ templateUrl: 'home.component.html' })
 export class HomeComponent {
@@ -12,6 +14,7 @@ export class HomeComponent {
 
     constructor(
         private userService: UserService,
+        private router:Router,
         private authenticationService: AuthenticationService
     ) {
         this.currentUser = this.authenticationService.currentUserValue;
@@ -23,5 +26,8 @@ export class HomeComponent {
             this.loading = false;
             this.userFromApi = user;
         });
+    }
+    searchCompanyData(){
+        this.router.navigate(['/companylist']);
     }
 }
