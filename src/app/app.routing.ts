@@ -7,6 +7,7 @@ import { AuthGuard } from './_helpers';
 import { Role } from './_models';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
+import { PersonDetailComponent } from './person-detail/person-detail.component';
 
 const routes: Routes = [
     {
@@ -32,6 +33,11 @@ const routes: Routes = [
     {
         path:'companydetail',
         component:CompanyDetailComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path:'personDetail',
+        component:PersonDetailComponent,
         canActivate: [AuthGuard]
     },
 

@@ -1,79 +1,18 @@
 <section id="get-started" class="padd-section wow fadeInUp">
     <div class="container ">
     <div class="company-profile ">
-     <div class="bannerBg"><img [src]="companyData._banner" style="width: 100%;"></div>
+     <div class="bannerBg"><img [src]="personData._banner" style="width: 100%;"></div>
         <div class="col-12 features1">
-            <div class="cricle"><img [src]="companyData._logo" alt="img" class="img-fluid"></div>
-            <h4>{{companyData._name}}</h4>
-            <p>{{companyData._about}}</p>
-            <p><span>Connection : +{{companyData._size}}</span></p>
+            <div class="cricle"><img [src]="personData._profilePic" alt="img" class="img-fluid"></div>
+            <h4>{{personData._name}}</h4>
+            <p>{{personData._about}}</p>
         </div>
     </div>
     </div>
     <!-- <div class="sectionLine"></div> -->
     <div class="container">
-      <div class="col-12 features">
-        <div class="feature-block">
-          <div class="wow fadeInRight">
-            <h4>Abouts</h4>
-            <div class="row">
-              <div class="col-12">
-                <div class="wow fadeInRight profile" data-wow-duration="0.5s">
-                  <p>{{companyData._about}}</p>
-                  <p><span>Website</span> : {{companyData._website_url}}</p>
-                   <p><span>Industry</span> : {{companyData._industry}}</p>
-                    <p><span>Company size</span> : {{companyData._size}} </p>
-                    <p><span>Type</span> :  {{companyData._website_url}}</p>
-                    <p><span>Founded</span> : {{companyData._founded}}</p>
-                    <p><span>Specialties</span> :  {{companyData._specialities}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 features">
-        <div class="feature-block">
-            <div class="wow fadeInRight">
-              <h4>Locations</h4>
-              <div class="row">
-                <div class="col-12">
-                  <div class="wow fadeInRight" data-wow-duration="0.5s">
-                    <p>{{companyData._location.office_name}}</p>
-                    <p>{{companyData._location.address}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="col-12 ">
-        <div class="row">
-          <div class="wow fadeInRight">
-            <h4>Employees</h4>
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12 col-lg-4" *ngFor="let person of personList">
-                  <div class="row" >
-                      <div class="border text-center">
-                            <div class="col-12 vendor">
-                                <img src="/assets/img/svg/user.svg" alt="img" class="img-fluid">
-                            </div>
-                            <div class="col-12">
-                                <h4>{{person._name}}</h4>
-                                <p>{{person._about}}</p>
-                            </div>
-                            <div class="col-12 topBoorder">
-                                <a [routerLink]="['/personDetail']" [state]="person">Connect</a>
-                            </div>
-                        </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
-        </div>
-    </div>
+     
+   
     </div>
     <!-- <div class="container section-title-3">
         <div class="col-sm-12">

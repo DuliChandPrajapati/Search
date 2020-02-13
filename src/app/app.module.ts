@@ -19,8 +19,12 @@ import { FooterComponent } from './_shared/footer/footer.component'
 ;
 import { EmployeeListComponent } from './employee-list/employee-list.component'
 ;
-import { CompanyListComponent } from './company-list/company-list.component';
+import { CompanyListComponent } from './company-list/company-list.component'
+;
 import { CompanyDetailComponent } from './company-detail/company-detail.component'
+;
+import { PersonDetailComponent } from './person-detail/person-detail.component'
+;
 @NgModule({
     imports: [
         BrowserModule,
@@ -40,7 +44,8 @@ import { CompanyDetailComponent } from './company-detail/company-detail.componen
         FooterComponent ,
         EmployeeListComponent ,
         CompanyListComponent ,
-        CompanyDetailComponent ],
+        CompanyDetailComponent ,
+        PersonDetailComponent],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
