@@ -35,40 +35,86 @@
     </div>
     <div class="sectionLine"></div>
     <div class="container">
-        <div class="row background">
-            <div class="col-12 features">
-                <h4>Locations</h4>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="wow fadeInRight" data-wow-duration="0.5s">
-                            <p>{{companyData._location.office_name}}</p>
-                            <p>{{companyData._location.address}}</p>
+        <div class="row">
+            <nav>
+                <div class="nav nav-pills" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="pill" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Company</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="pill" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Article</a>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane show fade active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="container">
+                        <div class="row background">
+                            <div class="col-12 features">
+                                <h4>Locations</h4>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="wow fadeInRight" data-wow-duration="0.5s">
+                                            <p>{{companyData._location.office_name}}</p>
+                                            <p>{{companyData._location.address}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sectionLine"></div>
+                    <div class="container">
+                        <div class="row background">
+                            <div class="col-12 shadow-none">
+                                <h4>Employees</h4>
+                            </div>
+                            <div class="col-4" *ngFor="let person of personList">
+                                <div class="border text-center">
+                                    <div class="col-12 vendor">
+                                        <img src="/assets/img/profile.png" alt="img" class="img-fluid">
+                                    </div>
+                                    <div class="col-12">
+                                        <h4>{{person._name}}</h4>
+                                        <p>{{person._about}}</p>
+                                    </div>
+                                    <div class="col-12 topBoorder">
+                                        <a [routerLink]="['/personDetail']" [state]="person">Connect</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="container">
+                        <div class="row background">
+                            <div class="col-12 features">
+                                <div class="feature-block articles border-bottom">
+                                    <h4><span class="articleNumber">1</span>Bukisa</h4>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>One of the most commonly used websites for article submissions, so don’t waste your money looking for a job. Instead, build your reputation as a writer and companies will come to hire you. With an effective
+                                                revenue sharing strategy, you can earn money over the articles that receive high publicity.</p>
+                                            <img src="./assets/img/information.jpg" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feature-block articles">
+                                    <h4><span class="articleNumber">2</span>Tour</h4>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>One of the most commonly used websites for article submissions, so don’t waste your money looking for a job. Instead, build your reputation as a writer and companies will come to hire you. With an effective
+                                                revenue sharing strategy, you can earn money over the articles that receive high publicity.</p>
+                                            <img src="./assets/img/information.jpg" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="sectionLine"></div>
-    <div class="container">
-        <div class="row background">
-            <div class="col-12 shadow-none">
-                <h4>Employees</h4>
-            </div>
-            <div class="col-4" *ngFor="let person of personList">
-                <div class="border text-center">
-                    <div class="col-12 vendor">
-                        <img src="/assets/img/profile.png" alt="img" class="img-fluid">
-                    </div>
-                    <div class="col-12">
-                        <h4>{{person._name}}</h4>
-                        <p>{{person._about}}</p>
-                    </div>
-                    <div class="col-12 topBoorder">
-                        <a [routerLink]="['/personDetail']" [state]="person">Connect</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

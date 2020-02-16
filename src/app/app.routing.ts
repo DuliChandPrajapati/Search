@@ -8,6 +8,8 @@ import { Role } from './_models';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
     {
@@ -40,9 +42,19 @@ const routes: Routes = [
         component:PersonDetailComponent,
         canActivate: [AuthGuard]
     },
+    {
+        path:'about',
+        component:AboutComponent
+        // canActivate: [AuthGuard]
+    },
+    {
+        path:'contact',
+        component:ContactComponent
+        // canActivate: [AuthGuard]
+    },
 
     // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    { path: '**', redirectTo: '/login' }
 ];
 
 export const appRoutingModule = RouterModule.forRoot(routes);

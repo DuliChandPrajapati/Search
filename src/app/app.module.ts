@@ -13,18 +13,14 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
 import { AdminComponent } from './admin';
 import { LoginComponent } from './login';;
-import { HeaderComponent } from './_shared/header/header.component'
-;
-import { FooterComponent } from './_shared/footer/footer.component'
-;
-import { EmployeeListComponent } from './employee-list/employee-list.component'
-;
-import { CompanyListComponent } from './company-list/company-list.component'
-;
-import { CompanyDetailComponent } from './company-detail/company-detail.component'
-;
-import { PersonDetailComponent } from './person-detail/person-detail.component'
-;
+import { HeaderComponent } from './_shared/header/header.component';
+import { FooterComponent } from './_shared/footer/footer.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { CompanyListComponent } from './company-list/company-list.component';
+import { CompanyDetailComponent } from './company-detail/company-detail.component';
+import { PersonDetailComponent } from './person-detail/person-detail.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 @NgModule({
     imports: [
         BrowserModule,
@@ -37,15 +33,16 @@ import { PersonDetailComponent } from './person-detail/person-detail.component'
         AppComponent,
         HomeComponent,
         AdminComponent,
-        LoginComponent
-,
-        HeaderComponent
-,
+        LoginComponent,
+        HeaderComponent,
         FooterComponent ,
         EmployeeListComponent ,
         CompanyListComponent ,
         CompanyDetailComponent ,
-        PersonDetailComponent],
+        PersonDetailComponent,
+        ContactComponent,
+        AboutComponent
+    ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
