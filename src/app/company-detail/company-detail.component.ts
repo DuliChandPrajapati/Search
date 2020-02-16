@@ -32,19 +32,84 @@ export class CompanyDetailComponent implements OnInit {
         "_job_list":[
           {
             "profile_heading":"CEO", 
+            "start_date":"Sep 2019",
+            "end_date":"till", 
+            "skill":"Client Managment, Bussiness Stradgy, Product Handling",
+            "location":"Noida", 
+            "Description":"User handling"
+          },
+          {
+            "profile_heading":"CTO", 
+            "start_date":"Jan 2018",
+            "end_date":"Sep 2019", 
+            "skill":"AWS, Team Managment, DevOps, Backend Technology, Database Handling",
+            "location":"Gurgram", 
+            "Description":"Team Handling"
+          },
+          {
+            "profile_heading":"Principle Engineer", 
             "start_date":"sep-2020",
             "end_date":"dec_2020", 
-            "skill":"Technical manager",
+            "skill":"Java, Spring Boot, MySql, Frontend, AWS,  DevOps",
             "location":"Noida", 
-          "Description":"abdc dummy"
+            "Description":"Module handling"
           }
         ],
         "_accomplishment":["English","Hindi"],
         "_coulleges_names":["Jhone", "Mark"],
         "_followers_name":["Jhon", "Milly"],
         "_following_companies":["abc pvt ltd", "google.com", "yahoo.in"],
-        "_education":["MBA","MCA"],
-        "_interest":["Dialottee", "Google"],
+        "_education":[
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Master of Computer Application (MCA), Information Technology",
+            "_start_education": "2009",
+            "_end_education": "2012"
+          },
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Bachalore of Computer Application (BCA), Information Technology",
+            "_start_education": "2006",
+            "_end_education": "2009"
+          },
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Sinor Secondary, Education",
+            "_start_education": "2004",
+            "_end_education": "2006"
+          }
+        ],
+        "_interest":[
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Wipro Limited",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"LinkedIn",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Deloitte",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"SAP",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Cisco",
+            "_followers_count":"2,202,033"
+          }
+
+        ],
         "_social_profiles":["facebook.com", "yahoo.com"],
         "_connection":["Google", "Yahoo", ""],
         "_active_companies":[""],
@@ -64,19 +129,81 @@ export class CompanyDetailComponent implements OnInit {
         "_job_list":[
           {
             "profile_heading":"CEO", 
+            "start_date":"Sep 2019",
+            "end_date":"till", 
+            "skill":"Client Managment, Bussiness Stradgy, Product Handling",
+            "location":"Noida", 
+            "Description":"User handling"
+          },
+          {
+            "profile_heading":"CTO", 
+            "start_date":"Jan 2018",
+            "end_date":"Sep 2019", 
+            "skill":"AWS, Team Managment, DevOps, Backend Technology, Database Handling",
+            "location":"Gurgram", 
+            "Description":"Team Handling"
+          },
+          {
+            "profile_heading":"Principle Engineer", 
             "start_date":"sep-2020",
             "end_date":"dec_2020", 
-            "skill":"Technical manager",
+            "skill":"Java, Spring Boot, MySql, Frontend, AWS,  DevOps",
             "location":"Noida", 
-          "Description":"abdc dummy"
+            "Description":"Module handling"
           }
         ],
         "_accomplishment":["English","Hindi"],
         "_coulleges_names":["Jhone", "Mark"],
         "_followers_name":["Jhon", "Milly"],
         "_following_companies":["abc pvt ltd", "google.com", "yahoo.in"],
-        "_education":["MBA","MCA"],
-        "_interest":["Dialottee", "Google"],
+        "_education":[
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Master of Computer Application (MCA), Information Technology",
+            "_start_education": "2009",
+            "_end_education": "2012"
+          },
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Bachalore of Computer Application (BCA), Information Technology",
+            "_start_education": "2006",
+            "_end_education": "2009"
+          },
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Sinor Secondary, Education",
+            "_start_education": "2004",
+            "_end_education": "2006"
+          }
+        ],
+        "_interest":[{
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Wipro Limited",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"LinkedIn",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Deloitte",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"SAP",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Cisco",
+            "_followers_count":"2,202,033"
+          }],
         "_social_profiles":["facebook.com", "yahoo.com"],
         "_connection":["Google", "Yahoo", ""],
         "_active_companies":[""],
@@ -96,19 +223,81 @@ export class CompanyDetailComponent implements OnInit {
         "_job_list":[
           {
             "profile_heading":"CEO", 
+            "start_date":"Sep 2019",
+            "end_date":"till", 
+            "skill":"Client Managment, Bussiness Stradgy, Product Handling",
+            "location":"Noida", 
+            "Description":"User handling"
+          },
+          {
+            "profile_heading":"CTO", 
+            "start_date":"Jan 2018",
+            "end_date":"Sep 2019", 
+            "skill":"AWS, Team Managment, DevOps, Backend Technology, Database Handling",
+            "location":"Gurgram", 
+            "Description":"Team Handling"
+          },
+          {
+            "profile_heading":"Principle Engineer", 
             "start_date":"sep-2020",
             "end_date":"dec_2020", 
-            "skill":"Technical manager",
+            "skill":"Java, Spring Boot, MySql, Frontend, AWS,  DevOps",
             "location":"Noida", 
-          "Description":"abdc dummy"
+            "Description":"Module handling"
           }
         ],
         "_accomplishment":["English","Hindi"],
         "_coulleges_names":["Jhone", "Mark"],
         "_followers_name":["Jhon", "Milly"],
         "_following_companies":["abc pvt ltd", "google.com", "yahoo.in"],
-        "_education":["MBA","MCA"],
-        "_interest":["Dialottee", "Google"],
+        "_education":[
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Master of Computer Application (MCA), Information Technology",
+            "_start_education": "2009",
+            "_end_education": "2012"
+          },
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Bachalore of Computer Application (BCA), Information Technology",
+            "_start_education": "2006",
+            "_end_education": "2009"
+          },
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Sinor Secondary, Education",
+            "_start_education": "2004",
+            "_end_education": "2006"
+          }
+        ],
+        "_interest":[{
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Wipro Limited",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"LinkedIn",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Deloitte",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"SAP",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Cisco",
+            "_followers_count":"2,202,033"
+          }],
         "_social_profiles":["facebook.com", "yahoo.com"],
         "_connection":["Google", "Yahoo", ""],
         "_active_companies":[""],
@@ -128,19 +317,81 @@ export class CompanyDetailComponent implements OnInit {
         "_job_list":[
           {
             "profile_heading":"CEO", 
+            "start_date":"Sep 2019",
+            "end_date":"till", 
+            "skill":"Client Managment, Bussiness Stradgy, Product Handling",
+            "location":"Noida", 
+            "Description":"User handling"
+          },
+          {
+            "profile_heading":"CTO", 
+            "start_date":"Jan 2018",
+            "end_date":"Sep 2019", 
+            "skill":"AWS, Team Managment, DevOps, Backend Technology, Database Handling",
+            "location":"Gurgram", 
+            "Description":"Team Handling"
+          },
+          {
+            "profile_heading":"Principle Engineer", 
             "start_date":"sep-2020",
             "end_date":"dec_2020", 
-            "skill":"Technical manager",
+            "skill":"Java, Spring Boot, MySql, Frontend, AWS,  DevOps",
             "location":"Noida", 
-          "Description":"abdc dummy"
+            "Description":"Module handling"
           }
         ],
         "_accomplishment":["English","Hindi"],
         "_coulleges_names":["Jhone", "Mark"],
         "_followers_name":["Jhon", "Milly"],
         "_following_companies":["abc pvt ltd", "google.com", "yahoo.in"],
-        "_education":["MBA","MCA"],
-        "_interest":["Dialottee", "Google"],
+        "_education":[
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Master of Computer Application (MCA), Information Technology",
+            "_start_education": "2009",
+            "_end_education": "2012"
+          },
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Bachalore of Computer Application (BCA), Information Technology",
+            "_start_education": "2006",
+            "_end_education": "2009"
+          },
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Sinor Secondary, Education",
+            "_start_education": "2004",
+            "_end_education": "2006"
+          }
+        ],
+        "_interest":[{
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Wipro Limited",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"LinkedIn",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Deloitte",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"SAP",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Cisco",
+            "_followers_count":"2,202,033"
+          }],
         "_social_profiles":["facebook.com", "yahoo.com"],
         "_connection":["Google", "Yahoo", ""],
         "_active_companies":[""],
@@ -160,19 +411,81 @@ export class CompanyDetailComponent implements OnInit {
         "_job_list":[
           {
             "profile_heading":"CEO", 
+            "start_date":"Sep 2019",
+            "end_date":"till", 
+            "skill":"Client Managment, Bussiness Stradgy, Product Handling",
+            "location":"Noida", 
+            "Description":"User handling"
+          },
+          {
+            "profile_heading":"CTO", 
+            "start_date":"Jan 2018",
+            "end_date":"Sep 2019", 
+            "skill":"AWS, Team Managment, DevOps, Backend Technology, Database Handling",
+            "location":"Gurgram", 
+            "Description":"Team Handling"
+          },
+          {
+            "profile_heading":"Principle Engineer", 
             "start_date":"sep-2020",
             "end_date":"dec_2020", 
-            "skill":"Technical manager",
+            "skill":"Java, Spring Boot, MySql, Frontend, AWS,  DevOps",
             "location":"Noida", 
-          "Description":"abdc dummy"
+            "Description":"Module handling"
           }
         ],
         "_accomplishment":["English","Hindi"],
         "_coulleges_names":["Jhone", "Mark"],
         "_followers_name":["Jhon", "Milly"],
         "_following_companies":["abc pvt ltd", "google.com", "yahoo.in"],
-        "_education":["MBA","MCA"],
-        "_interest":["Dialottee", "Google"],
+        "_education":[
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Master of Computer Application (MCA), Information Technology",
+            "_start_education": "2009",
+            "_end_education": "2012"
+          },
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Bachalore of Computer Application (BCA), Information Technology",
+            "_start_education": "2006",
+            "_end_education": "2009"
+          },
+          {
+            "_university_logo":"/assets/img/default-logo.png",
+            "_university_name":"Maharishi Dayanand University",
+            "_course_name": "Sinor Secondary, Education",
+            "_start_education": "2004",
+            "_end_education": "2006"
+          }
+        ],
+        "_interest":[{
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Wipro Limited",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"LinkedIn",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Deloitte",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"SAP",
+            "_followers_count":"2,202,033"
+          },
+          {
+            "_logo":"/assets/img/default-logo.png",
+            "_name":"Cisco",
+            "_followers_count":"2,202,033"
+          }],
         "_social_profiles":["facebook.com", "yahoo.com"],
         "_connection":["Google", "Yahoo", ""],
         "_active_companies":[""],
