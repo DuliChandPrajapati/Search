@@ -38,7 +38,7 @@ h4 {
   font-size     : 13px;
   font-weight   : 700;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   line-height   : 2;
 }
 
@@ -64,6 +64,7 @@ li {
   letter-spacing: 2px;
   line-height   : 30px;
   text-transform: capitalize;
+  list-style: none;
 }
 
 p {
@@ -71,8 +72,8 @@ p {
   font-size     : 14px;
   font-weight   : 300;
   letter-spacing: 0.5px;
-  line-height   : 2;
-  margin-bottom : 20px;
+  line-height   : 16px;
+  // margin-bottom : 20px;
 }
 
 span {
@@ -683,6 +684,10 @@ body.mobile-nav-active #mobile-nav-toggle i {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 2px 3px rgba(0, 0, 0, .2);
   transition: box-shadow 83ms;
 }
+.border-bottom{
+  border-bottom : #dee2e6 solid 1px;
+  margin:15px 0px 0px 0px;
+}
 
 .features {
   // padding      : 5px;
@@ -697,6 +702,17 @@ body.mobile-nav-active #mobile-nav-toggle i {
   -moz-box-shadow   : 1px 8px 6px -7px rgba(0, 0, 0, .15);
   box-shadow        : 1px 8px 6px -7px rgba(0, 0, 0, .15);
   margin-top        : -55px;
+}
+.shadow-none h4{
+  padding: 15px 0;
+  font-size: 18px;
+  line-height: 36px;
+
+}
+.features h4{
+  padding: 15px 0;
+  font-size: 18px;
+  line-height: 36px;
 }
 
 /* Product Advanced Featuress Section
@@ -771,6 +787,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   background: #fff none repeat scroll 0 0;
   padding   : 10px 10px;
   transition: all 0.5s ease-in-out 0s;
+  margin: 15px 2px;
 }
 
 @media (max-width: 991px) {
@@ -792,7 +809,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   margin-bottom: 0px;
 }
 
-#get-started .feature-block .bold {
+#get-started .feature-block .bold, .bold {
   font-weight: 600;
   font-size  : 16px;
 }
@@ -828,8 +845,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 .vendor img {
-  padding      : 5px;
-  background   : #e6e6e6;
+  // padding      : 5px;
+  // background   : #e6e6e6;
   border-radius: 100%;
   margin       : 10px;
   width        : 60px;
@@ -840,6 +857,10 @@ body.mobile-nav-active #mobile-nav-toggle i {
 .topBoorder {
   border-top: #e6e6e6 solid 1px;
   padding   : 10px 0;
+}
+.topBoorder a{
+  text-decoration: none;
+  color:#283e4a;
 }
 
 /* About Us Section

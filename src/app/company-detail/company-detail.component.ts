@@ -26,8 +26,8 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/IndianOil_Refinery.jpg/100px-IndianOil_Refinery.jpg",
-        "_banner": "https://www.organoasia.com/wp-content/uploads/2013/07/banner-m-oil-and-gas-industry2.jpg",
+        "_profilePic":"/assets/img/company.png",
+        "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
           {
@@ -123,8 +123,8 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/IndianOil_Refinery.jpg/100px-IndianOil_Refinery.jpg",
-        "_banner": "https://www.organoasia.com/wp-content/uploads/2013/07/banner-m-oil-and-gas-industry2.jpg",
+        "_profilePic":"/assets/img/company.png",
+        "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
           {
@@ -217,8 +217,8 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/IndianOil_Refinery.jpg/100px-IndianOil_Refinery.jpg",
-        "_banner": "https://www.organoasia.com/wp-content/uploads/2013/07/banner-m-oil-and-gas-industry2.jpg",
+        "_profilePic":"/assets/img/company.png",
+        "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
           {
@@ -311,8 +311,8 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/IndianOil_Refinery.jpg/100px-IndianOil_Refinery.jpg",
-        "_banner": "https://www.organoasia.com/wp-content/uploads/2013/07/banner-m-oil-and-gas-industry2.jpg",
+        "_profilePic":"/assets/img/company.png",
+        "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
           {
@@ -405,8 +405,8 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/IndianOil_Refinery.jpg/100px-IndianOil_Refinery.jpg",
-        "_banner": "https://www.organoasia.com/wp-content/uploads/2013/07/banner-m-oil-and-gas-industry2.jpg",
+        "_profilePic":"/assets/img/company.png",
+        "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
           {

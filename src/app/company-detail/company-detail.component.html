@@ -21,12 +21,12 @@
                     <div class="col-12">
                         <div class="wow fadeInRight profile" data-wow-duration="0.5s">
                             <p>{{companyData._about}}</p>
-                            <p><span>Website</span> : {{companyData._website_url}}</p>
-                            <p><span>Industry</span> : {{companyData._industry}}</p>
-                            <p><span>Company size</span> : {{companyData._size}} </p>
-                            <p><span>Type</span> : {{companyData._website_url}}</p>
-                            <p><span>Founded</span> : {{companyData._founded}}</p>
-                            <p><span>Specialties</span> : {{companyData._specialities}}</p>
+                            <p><span class="bold">Website</span> : {{companyData._website_url}}</p>
+                            <p><span class="bold">Industry</span> : {{companyData._industry}}</p>
+                            <p><span class="bold">Company size</span> : {{companyData._size}} </p>
+                            <p><span class="bold">Type</span> : {{companyData._website_url}}</p>
+                            <p><span class="bold">Founded</span> : {{companyData._founded}}</p>
+                            <p><span class="bold">Specialties</span> : {{companyData._specialities}}</p>
                         </div>
                     </div>
                 </div>
@@ -53,13 +53,13 @@
     <div class="sectionLine"></div>
     <div class="container">
         <div class="row background">
-            <div class="col-12">
+            <div class="col-12 shadow-none">
                 <h4>Employees</h4>
             </div>
             <div class="col-4" *ngFor="let person of personList">
                 <div class="border text-center">
                     <div class="col-12 vendor">
-                        <img src="/assets/img/svg/user.svg" alt="img" class="img-fluid">
+                        <img src="/assets/img/profile.png" alt="img" class="img-fluid">
                     </div>
                     <div class="col-12">
                         <h4>{{person._name}}</h4>
