@@ -1,36 +1,39 @@
 <!--==========================
     Get Started Section
   ============================-->
-  <section id="get-started" class="padd-section wow fadeInUp">
+<section id="get-started" class="padd-section wow fadeInUp">
 
     <div class="container">
-      <div class="section-title-2">
-          <h3 class="resultSearch">Companies - {{companylist.length}}</h3>
-          
-      </div>
+        <div class="section-title-2">
+            <h3 class="resultSearch">Companies - {{companylist.length}}</h3>
+
+        </div>
     </div>
     <!-- <div class="sectionLine"></div> -->
     <div class="container text-center">
-      <div class="row">
+        <div class="row">
 
-        <div class="col-sm-12 col-lg-4" *ngFor="let company of companylist">
-          <div class="feature-block features">
+            <div class="col-sm-12 col-lg-4" *ngFor="let company of companylist | paginate: { id: 'listing_pagination',
+            itemsPerPage: 3,
+            currentPage: page,
+            totalItems: totalRec }">
+                <div class="feature-block features">
+                    <div class="col-12 vendor">
+                        <img [src]="company._logo" alt="img" class="img-fluid">
+                    </div>
 
-            <div class="col-12 vendor">
-              <img [src]="company._logo" alt="img" class="img-fluid">
+                    <h4>{{company._name}}</h4>
+                    <p>{{company._about}}</p>
+                    <a [routerLink]="['/companydetail']" [state]="company">read more</a>
+
+                </div>
             </div>
-            
-            <h4>{{company._name}}</h4>
-            <p>{{company._about}}</p>
-            <a [routerLink]="['/companydetail']" [state]="company">read more</a>
-
-          </div>
         </div>
 
+        <div class="col-12">
+            <pagination-controls id="listing_pagination" maxSize="3" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+        </div>
 
-  
-  
-      </div>
     </div>
 
-  </section>
+</section>

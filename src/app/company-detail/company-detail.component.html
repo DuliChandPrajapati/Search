@@ -12,27 +12,7 @@
             </div>
         </div>
     </div>
-    <div class="sectionLine"></div>
-    <div class="container">
-        <div class="row background">
-            <div class="col-12 features">
-                <h4>Abouts</h4>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="wow fadeInRight profile" data-wow-duration="0.5s">
-                            <p>{{companyData._about}}</p>
-                            <p><span class="bold">Website</span> : {{companyData._website_url}}</p>
-                            <p><span class="bold">Industry</span> : {{companyData._industry}}</p>
-                            <p><span class="bold">Company size</span> : {{companyData._size}} </p>
-                            <p><span class="bold">Type</span> : {{companyData._website_url}}</p>
-                            <p><span class="bold">Founded</span> : {{companyData._founded}}</p>
-                            <p><span class="bold">Specialties</span> : {{companyData._specialities}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="sectionLine"></div>
     <div class="container">
         <div class="row">
@@ -46,6 +26,27 @@
         <div class="row">
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane show fade active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="container">
+                        <div class="row background">
+                            <div class="col-12 features">
+                                <h4>Overview</h4>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="wow fadeInRight profile" data-wow-duration="0.5s">
+                                            <p>{{companyData._about}}</p>
+                                            <p><span class="bold">Website</span> : {{companyData._website_url}}</p>
+                                            <p><span class="bold">Industry</span> : {{companyData._industry}}</p>
+                                            <p><span class="bold">Company size</span> : {{companyData._size}} </p>
+                                            <p><span class="bold">Type</span> : {{companyData._website_url}}</p>
+                                            <p><span class="bold">Founded</span> : {{companyData._founded}}</p>
+                                            <p><span class="bold">Specialties</span> : {{companyData._specialities}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sectionLine"></div>
                     <div class="container">
                         <div class="row background">
                             <div class="col-12 features">
@@ -63,15 +64,18 @@
                     </div>
 
                     <div class="sectionLine"></div>
-                    <div class="container">
+                    <div class="container features">
                         <div class="row background">
                             <div class="col-12 shadow-none">
                                 <h4>Employees</h4>
                             </div>
-                            <div class="col-4" *ngFor="let person of personList">
+                            <div class="col-lg-4 col-sm-12" *ngFor="let person of personList | paginate: { id: 'listing_pagination',
+                            itemsPerPage: 3,
+                            currentPage: page,
+                            totalItems: totalRec }">
                                 <div class="border text-center">
                                     <div class="col-12 vendor">
-                                        <img src="/assets/img/profile.png" alt="img" class="img-fluid">
+                                        <img [src]="person._profilePic" alt="img" class="img-fluid">
                                     </div>
                                     <div class="col-12">
                                         <h4>{{person._name}}</h4>
@@ -82,36 +86,39 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-12 text-center">
+                                <pagination-controls id="listing_pagination" maxSize="3" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+                            </div>
                         </div>
                     </div>
 
                 </div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="tab-pane fade features" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                     <div class="container">
                         <div class="row background">
-                            <div class="col-12 features">
-                                <div class="feature-block articles border-bottom">
-                                    <h4><span class="articleNumber">1</span>Bukisa</h4>
+                            <div class="col-12 " *ngFor="let article of companyArticle | paginate: { id: 'listing_pagination',
+                            itemsPerPage: 3,
+                            currentPage: page,
+                            totalItems: totalRec }">
+                                <div class="articles border-bottom">
+                                    <!-- <span class="articleNumber"></span> -->
                                     <div class="row">
                                         <div class="col-12">
-                                            <p>One of the most commonly used websites for article submissions, so don’t waste your money looking for a job. Instead, build your reputation as a writer and companies will come to hire you. With an effective
-                                                revenue sharing strategy, you can earn money over the articles that receive high publicity.</p>
-                                            <img src="./assets/img/information.jpg" style="width: 100%;">
+                                            <h4>{{article._event_name}}
+                                                <div class="publish_date">{{article._published_date}}</div>
+                                            </h4>
+                                            <p>{{article._description}}</p>
+                                            <img [src]="article._image" style="width: 100%;">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="feature-block articles">
-                                    <h4><span class="articleNumber">2</span>Tour</h4>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <p>One of the most commonly used websites for article submissions, so don’t waste your money looking for a job. Instead, build your reputation as a writer and companies will come to hire you. With an effective
-                                                revenue sharing strategy, you can earn money over the articles that receive high publicity.</p>
-                                            <img src="./assets/img/information.jpg" style="width: 100%;">
-                                        </div>
-                                    </div>
-                                </div>
+
+                            </div>
+                            <div class="col-12 text-center">
+                                <pagination-controls id="listing_pagination" maxSize="3" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
                             </div>
                         </div>
+
                     </div>
                 </div>
 

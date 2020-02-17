@@ -8,11 +8,12 @@ import { fakeBackendProvider } from './_helpers';
 
 import { AppComponent } from './app.component';
 import { appRoutingModule } from './app.routing';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
 import { AdminComponent } from './admin';
-import { LoginComponent } from './login';;
+import { LoginComponent } from './login';
 import { HeaderComponent } from './_shared/header/header.component';
 import { FooterComponent } from './_shared/footer/footer.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
@@ -27,7 +28,8 @@ import { ContactComponent } from './contact/contact.component';
         ReactiveFormsModule,
         HttpClientModule,
         appRoutingModule,
-        FormsModule
+        FormsModule,
+        NgxPaginationModule
     ],
     declarations: [
         AppComponent,

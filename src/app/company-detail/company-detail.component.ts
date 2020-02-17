@@ -8,7 +8,10 @@ import { filter, map } from 'rxjs/operators';
 })
 export class CompanyDetailComponent implements OnInit {
   public companyData : any;
+  public totalRec;
+  page: number = 1;
   public personList : Array<any>;
+  public companyArticle : Array<any>;
   constructor(private router:Router) {
     
   
@@ -26,7 +29,7 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"/assets/img/company.png",
+        "_profilePic":"/assets/img/profile.png",
         "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
@@ -110,7 +113,11 @@ export class CompanyDetailComponent implements OnInit {
           }
 
         ],
-        "_social_profiles":["facebook.com", "yahoo.com"],
+        "_social_profiles":[
+          {"facebook":"facebook.com"}, 
+          {"yahoo":"yahoo.com"},
+          {"instagram":"instagram"}
+        ],
         "_connection":["Google", "Yahoo", ""],
         "_active_companies":[""],
         "_profile_status":true
@@ -123,7 +130,7 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"/assets/img/company.png",
+        "_profilePic":"/assets/img/profile.png",
         "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
@@ -204,7 +211,9 @@ export class CompanyDetailComponent implements OnInit {
             "_name":"Cisco",
             "_followers_count":"2,202,033"
           }],
-        "_social_profiles":["facebook.com", "yahoo.com"],
+        "_social_profiles":[{"facebook":"facebook.com"}, 
+          {"yahoo":"yahoo.com"},
+          {"instagram":"instagram"}],
         "_connection":["Google", "Yahoo", ""],
         "_active_companies":[""],
         "_profile_status":true
@@ -217,7 +226,7 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"/assets/img/company.png",
+        "_profilePic":"/assets/img/profile.png",
         "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
@@ -298,7 +307,9 @@ export class CompanyDetailComponent implements OnInit {
             "_name":"Cisco",
             "_followers_count":"2,202,033"
           }],
-        "_social_profiles":["facebook.com", "yahoo.com"],
+        "_social_profiles":[{"facebook":"facebook.com"}, 
+          {"yahoo":"yahoo.com"},
+          {"instagram":"instagram"}],
         "_connection":["Google", "Yahoo", ""],
         "_active_companies":[""],
         "_profile_status":true
@@ -311,7 +322,7 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"/assets/img/company.png",
+        "_profilePic":"/assets/img/profile.png",
         "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
@@ -392,7 +403,9 @@ export class CompanyDetailComponent implements OnInit {
             "_name":"Cisco",
             "_followers_count":"2,202,033"
           }],
-        "_social_profiles":["facebook.com", "yahoo.com"],
+        "_social_profiles":[{"facebook":"facebook.com"}, 
+          {"yahoo":"yahoo.com"},
+          {"instagram":"instagram"}],
         "_connection":["Google", "Yahoo", ""],
         "_active_companies":[""],
         "_profile_status":true
@@ -405,7 +418,7 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"/assets/img/company.png",
+        "_profilePic":"/assets/img/profile.png",
         "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
@@ -486,13 +499,66 @@ export class CompanyDetailComponent implements OnInit {
             "_name":"Cisco",
             "_followers_count":"2,202,033"
           }],
-        "_social_profiles":["facebook.com", "yahoo.com"],
+        "_social_profiles":[{"facebook":"facebook.com"}, 
+          {"yahoo":"yahoo.com"},
+          {"instagram":"instagram"}],
         "_connection":["Google", "Yahoo", ""],
         "_active_companies":[""],
         "_profile_status":true
       }
 
     ];
+
+    const companyArticleData = [
+      {
+        "_id":"12121",
+        "_published_date":"20-june-2019",
+        "_description":"One of the most commonly used websites for article submissions, so don’t waste your money looking for a job. Instead, build your reputation as a writer and companies will come to hire you. With an effective revenue sharing strategy, you can earn money over the articles that receive high publicity.",
+        "_image":"/assets/img/information.jpg",
+        "_event_name":"Diwali Celebration",
+        "article_url": "www.google.com"
+      },
+      {
+        "_id":"12122",
+        "_published_date":"20-june-2019",
+        "_description":"One of the most commonly used websites for article submissions, so don’t waste your money looking for a job. Instead, build your reputation as a writer and companies will come to hire you. With an effective revenue sharing strategy, you can earn money over the articles that receive high publicity.",
+        "_image":"/assets/img/information.jpg",
+        "_event_name":"Holi Celebration",
+        "article_url": "www.google.com"
+      },
+      {
+        "_id":"12123",
+        "_published_date":"20-june-2019",
+        "_description":"One of the most commonly used websites for article submissions, so don’t waste your money looking for a job. Instead, build your reputation as a writer and companies will come to hire you. With an effective revenue sharing strategy, you can earn money over the articles that receive high publicity.",
+        "_image":"/assets/img/information.jpg",
+        "_event_name":"Independance Day Celebration",
+        "article_url": "www.google.com"
+      },
+      {
+        "_id":"12124",
+        "_published_date":"20-june-2019",
+        "_description":"One of the most commonly used websites for article submissions, so don’t waste your money looking for a job. Instead, build your reputation as a writer and companies will come to hire you. With an effective revenue sharing strategy, you can earn money over the articles that receive high publicity.",
+        "_image":"/assets/img/information.jpg",
+        "_event_name":"New Year Celebration",
+        "article_url": "www.google.com"
+      },
+      {
+        "_id":"12125",
+        "_published_date":"20-june-2019",
+        "_description":"One of the most commonly used websites for article submissions, so don’t waste your money looking for a job. Instead, build your reputation as a writer and companies will come to hire you. With an effective revenue sharing strategy, you can earn money over the articles that receive high publicity.",
+        "_image":"/assets/img/information.jpg",
+        "_event_name":"Onam Celebration",
+        "article_url": "www.google.com"
+      },
+      {
+        "_id":"12126",
+        "_published_date":"20-june-2019",
+        "_description":"One of the most commonly used websites for article submissions, so don’t waste your money looking for a job. Instead, build your reputation as a writer and companies will come to hire you. With an effective revenue sharing strategy, you can earn money over the articles that receive high publicity.",
+        "_image":"/assets/img/information.jpg",
+        "_event_name":"Ramnavmi Celebration",
+        "article_url": "www.google.com"
+      }
+    ]
     
     if(history.state.navigationId == 1){
       this.companyData = JSON.parse(localStorage.getItem('currentState'));
@@ -501,6 +567,7 @@ export class CompanyDetailComponent implements OnInit {
       this.companyData  = history.state;
     }
     this.personList = personData;
+    this.companyArticle = companyArticleData;
   }
 
 }

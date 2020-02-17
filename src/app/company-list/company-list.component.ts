@@ -9,6 +9,9 @@ import {Router} from '@angular/router';
 export class CompanyListComponent implements OnInit {
 
   public companylist : Array<any>;
+  public companylistData;
+  public totalRec;
+  page: number = 1;
   constructor(private router:Router) { }
 
   ngOnInit() {
@@ -386,6 +389,13 @@ export class CompanyListComponent implements OnInit {
     ];
 
     this.companylist = companylist;
+    this.companylistData =  this.companylist;
+    this.loadEmployee();
+  }
+
+  private loadEmployee() {
+    this.companylist = this.companylistData;
+    this.totalRec = this.companylist.length;
   }
 
 }
