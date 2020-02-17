@@ -423,6 +423,7 @@ export class CompanyDetailComponent implements OnInit {
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"CEO", 
             "start_date":"Sep 2019",
             "end_date":"till", 
@@ -431,6 +432,7 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"User handling"
           },
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"CTO", 
             "start_date":"Jan 2018",
             "end_date":"Sep 2019", 
@@ -439,6 +441,7 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"Team Handling"
           },
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"Principle Engineer", 
             "start_date":"sep-2020",
             "end_date":"dec_2020", 

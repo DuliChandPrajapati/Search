@@ -14,7 +14,7 @@
         <div class="row">
 
             <div class="col-sm-12 col-lg-4" *ngFor="let company of companylist | paginate: { id: 'listing_pagination',
-            itemsPerPage: 3,
+            itemsPerPage: 10,
             currentPage: page,
             totalItems: totalRec }">
                 <div class="feature-block features">
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="col-12">
+        <div class="col-12 text-right">
             <pagination-controls id="listing_pagination" maxSize="3" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
         </div>
 

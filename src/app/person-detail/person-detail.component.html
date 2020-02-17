@@ -35,7 +35,7 @@
                 <div class="wow fadeInRight" data-wow-duration=" 0.5s ">
                     <h4>Experience</h4>
                     <div class="row " *ngFor="let jobs of personData._job_list ">
-                        <div class="col-1 "><img src="/assets/img/svg/document.svg " alt="img " class="img-fluid "></div>
+                        <div class="col-1 "><img [src]="jobs.company_logo" alt="img " class="img-fluid "></div>
                         <div class="col-11 border-bottom">
                             <p class="bold ">{{jobs.profile_heading}}</p>
                             <p>Dates Employed : {{jobs.start_date}} – {{jobs.end_date}}</p>
@@ -56,7 +56,7 @@
                 <div class="wow fadeInRight" data-wow-duration=" 0.5s">
                     <h4>Education</h4>
                     <div class="row " *ngFor="let education of personData._education ">
-                        <div class="col-1 "><img [src]="education._university_logo " alt="img " class="img-fluid "></div>
+                        <div class="col-1 "><img [src]="education._university_logo" alt="img " class="img-fluid "></div>
                         <div class="col-11 border-bottom">
                             <p class="bold ">{{education._university_name}}</p>
                             <p>{{education._university_name}}</p>
@@ -76,7 +76,7 @@
                 <div class="wow fadeInRight" data-wow-duration=" 0.5s">
                     <h4>Accomplishments</h4>
                     <div class="row ">
-                        <div class="col-1 "><img src="/assets/img/svg/document.svg " alt="img " class="img-fluid "></div>
+                        <div class="col-1 "><img src="/assets/img/document.png " alt="img " class="img-fluid "></div>
                         <div class="col-11 border-bottom">
                             <p class="bold ">Language</p>
                             <p><span class="bold ">{{personData._accomplishment.length}}</span> - <span class="bold " *ngFor="let lang of personData._accomplishment ">&nbsp;{{lang}}</span></p>
