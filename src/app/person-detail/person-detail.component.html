@@ -35,7 +35,7 @@
                 <div class="wow fadeInRight" data-wow-duration=" 0.5s ">
                     <h4>Experience</h4>
                     <div class="row " *ngFor="let jobs of personData._job_list ">
-                        <div class="col-1 "><img [src]="jobs.company_logo" alt="img " class="img-fluid "></div>
+                        <div class="col-1 "><img [src]="jobs.company_logo" alt="img " class="img-fluid imgBox"></div>
                         <div class="col-11 border-bottom">
                             <p class="bold ">{{jobs.profile_heading}}</p>
                             <p>Dates Employed : {{jobs.start_date}} – {{jobs.end_date}}</p>
@@ -56,7 +56,7 @@
                 <div class="wow fadeInRight" data-wow-duration=" 0.5s">
                     <h4>Education</h4>
                     <div class="row " *ngFor="let education of personData._education ">
-                        <div class="col-1 "><img [src]="education._university_logo" alt="img " class="img-fluid "></div>
+                        <div class="col-1 "><img [src]="education._university_logo" alt="img " class="img-fluid imgBox"></div>
                         <div class="col-11 border-bottom">
                             <p class="bold ">{{education._university_name}}</p>
                             <p>{{education._university_name}}</p>
@@ -75,12 +75,30 @@
             <div class="col-12 features ">
                 <div class="wow fadeInRight" data-wow-duration=" 0.5s">
                     <h4>Accomplishments</h4>
+                    <!-- <div class="row" *ngFor="let accomp of personData._accomplishment | keyvalue">
+                        main {{accomp.value | json}} change - {{accomp.keyvalue}}
+                        <div class="col-1 "><img src="/assets/img/document.png " alt="img " class="img-fluid imgBox"></div>
+                        <div class="col-11" *ngFor="let accompObj of accomp.value  | keyvalue">
+                            {{accompObj.value | json}}
+                        </div>
+
+                    </div> -->
                     <div class="row ">
-                        <div class="col-1 "><img src="/assets/img/document.png " alt="img " class="img-fluid "></div>
+                        <div class="col-1 "><img src="/assets/img/document.png " alt="img " class="img-fluid imgBox"></div>
                         <div class="col-11 border-bottom">
                             <p class="bold ">Language</p>
-                            <p><span class="bold ">{{personData._accomplishment.length}}</span> - <span class="bold " *ngFor="let lang of personData._accomplishment ">&nbsp;{{lang}}</span></p>
-
+                            <p>
+                                <span *ngFor="let accomp of personData._accomplishment">
+                                    <span *ngFor="let language of accomp.language"> {{language}}</span>
+                                </span>
+                            </p>
+                            <!-- <div class="sectionLine "></div>
+                            <p class="bold ">Published</p>
+                            <p>{{personData._accomplishment.published['job']}}</p> -->
+                            <!-- <p> <span *ngFor="let accompdata of personData._accomplishment">
+                                    <span *ngFor="let publish of accompdata.published"> </span>
+                                </span>
+                            </p> -->
                         </div>
                     </div>
                 </div>
@@ -96,10 +114,10 @@
                     <div class="row ">
                         <div class="col-sm-12 col-lg-3 " *ngFor="let interest of personData._interest ">
                             <ul class="interest ">
-                                <li><img [src]="interest._logo " alt="img " class="img-fluid "></li>
+                                <li><img [src]="interest._logo" alt="img " class="img-fluid imgBox"></li>
                                 <li>
                                     <p class="bold ">{{interest._name}}</p>
-                                    <p class="bold ">{{interest._followers_count}}</p>
+                                    <p>{{interest._followers_count}}</p>
                                 </li>
                             </ul>
 

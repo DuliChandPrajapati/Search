@@ -29,11 +29,12 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"/assets/img/profile.png",
+        "_profilePic":"/assets/img/user.png",
         "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"CEO", 
             "start_date":"Sep 2019",
             "end_date":"till", 
@@ -42,6 +43,7 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"User handling"
           },
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"CTO", 
             "start_date":"Jan 2018",
             "end_date":"Sep 2019", 
@@ -50,6 +52,7 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"Team Handling"
           },
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"Principle Engineer", 
             "start_date":"sep-2020",
             "end_date":"dec_2020", 
@@ -58,27 +61,37 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"Module handling"
           }
         ],
-        "_accomplishment":["English","Hindi"],
+        "_accomplishment":[
+          {
+            "language":["English","Hindi"]
+          },
+          {
+            "published":{
+              "job":"CEO",
+              "detail":"have traditionally included a variety of metadata in the response through"
+            }
+          }
+        ],
         "_coulleges_names":["Jhone", "Mark"],
         "_followers_name":["Jhon", "Milly"],
         "_following_companies":["abc pvt ltd", "google.com", "yahoo.in"],
         "_education":[
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Master of Computer Application (MCA), Information Technology",
             "_start_education": "2009",
             "_end_education": "2012"
           },
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Bachalore of Computer Application (BCA), Information Technology",
             "_start_education": "2006",
             "_end_education": "2009"
           },
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Sinor Secondary, Education",
             "_start_education": "2004",
@@ -87,27 +100,27 @@ export class CompanyDetailComponent implements OnInit {
         ],
         "_interest":[
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Wipro Limited",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"LinkedIn",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Deloitte",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"SAP",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Cisco",
             "_followers_count":"2,202,033"
           }
@@ -130,11 +143,12 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"/assets/img/profile.png",
+        "_profilePic":"/assets/img/user.png",
         "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"CEO", 
             "start_date":"Sep 2019",
             "end_date":"till", 
@@ -143,6 +157,7 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"User handling"
           },
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"CTO", 
             "start_date":"Jan 2018",
             "end_date":"Sep 2019", 
@@ -151,6 +166,7 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"Team Handling"
           },
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"Principle Engineer", 
             "start_date":"sep-2020",
             "end_date":"dec_2020", 
@@ -159,27 +175,37 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"Module handling"
           }
         ],
-        "_accomplishment":["English","Hindi"],
+        "_accomplishment":[
+          {
+            "language":["English","Hindi"]
+          },
+          {
+            "published":{
+              "job":"CEO",
+              "detail":"have traditionally included a variety of metadata in the response through"
+            }
+          }
+        ],
         "_coulleges_names":["Jhone", "Mark"],
         "_followers_name":["Jhon", "Milly"],
         "_following_companies":["abc pvt ltd", "google.com", "yahoo.in"],
         "_education":[
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Master of Computer Application (MCA), Information Technology",
             "_start_education": "2009",
             "_end_education": "2012"
           },
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Bachalore of Computer Application (BCA), Information Technology",
             "_start_education": "2006",
             "_end_education": "2009"
           },
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Sinor Secondary, Education",
             "_start_education": "2004",
@@ -187,27 +213,27 @@ export class CompanyDetailComponent implements OnInit {
           }
         ],
         "_interest":[{
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Wipro Limited",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"LinkedIn",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Deloitte",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"SAP",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Cisco",
             "_followers_count":"2,202,033"
           }],
@@ -226,11 +252,12 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"/assets/img/profile.png",
+        "_profilePic":"/assets/img/user.png",
         "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"CEO", 
             "start_date":"Sep 2019",
             "end_date":"till", 
@@ -239,6 +266,7 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"User handling"
           },
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"CTO", 
             "start_date":"Jan 2018",
             "end_date":"Sep 2019", 
@@ -247,6 +275,7 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"Team Handling"
           },
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"Principle Engineer", 
             "start_date":"sep-2020",
             "end_date":"dec_2020", 
@@ -255,27 +284,37 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"Module handling"
           }
         ],
-        "_accomplishment":["English","Hindi"],
+        "_accomplishment":[
+          {
+            "language":["English","Hindi"]
+          },
+          {
+            "published":{
+              "job":"CEO",
+              "detail":"have traditionally included a variety of metadata in the response through"
+            }
+          }
+        ],
         "_coulleges_names":["Jhone", "Mark"],
         "_followers_name":["Jhon", "Milly"],
         "_following_companies":["abc pvt ltd", "google.com", "yahoo.in"],
         "_education":[
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Master of Computer Application (MCA), Information Technology",
             "_start_education": "2009",
             "_end_education": "2012"
           },
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Bachalore of Computer Application (BCA), Information Technology",
             "_start_education": "2006",
             "_end_education": "2009"
           },
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Sinor Secondary, Education",
             "_start_education": "2004",
@@ -283,27 +322,27 @@ export class CompanyDetailComponent implements OnInit {
           }
         ],
         "_interest":[{
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Wipro Limited",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"LinkedIn",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Deloitte",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"SAP",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Cisco",
             "_followers_count":"2,202,033"
           }],
@@ -322,11 +361,12 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"/assets/img/profile.png",
+        "_profilePic":"/assets/img/user.png",
         "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"CEO", 
             "start_date":"Sep 2019",
             "end_date":"till", 
@@ -335,6 +375,7 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"User handling"
           },
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"CTO", 
             "start_date":"Jan 2018",
             "end_date":"Sep 2019", 
@@ -343,6 +384,7 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"Team Handling"
           },
           {
+            "company_logo":"/assets/img/document.png",
             "profile_heading":"Principle Engineer", 
             "start_date":"sep-2020",
             "end_date":"dec_2020", 
@@ -351,27 +393,37 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"Module handling"
           }
         ],
-        "_accomplishment":["English","Hindi"],
+        "_accomplishment":[
+          {
+            "language":["English","Hindi"]
+          },
+          {
+            "published":{
+              "job":"CEO",
+              "detail":"have traditionally included a variety of metadata in the response through"
+            }
+          }
+        ],
         "_coulleges_names":["Jhone", "Mark"],
         "_followers_name":["Jhon", "Milly"],
         "_following_companies":["abc pvt ltd", "google.com", "yahoo.in"],
         "_education":[
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Master of Computer Application (MCA), Information Technology",
             "_start_education": "2009",
             "_end_education": "2012"
           },
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Bachalore of Computer Application (BCA), Information Technology",
             "_start_education": "2006",
             "_end_education": "2009"
           },
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Sinor Secondary, Education",
             "_start_education": "2004",
@@ -379,27 +431,27 @@ export class CompanyDetailComponent implements OnInit {
           }
         ],
         "_interest":[{
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Wipro Limited",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"LinkedIn",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Deloitte",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"SAP",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Cisco",
             "_followers_count":"2,202,033"
           }],
@@ -418,7 +470,7 @@ export class CompanyDetailComponent implements OnInit {
         "_office_contact":["9090909090","8779987799"],
         "_location":"India",
         "_current_designation":"CEO",
-        "_profilePic":"/assets/img/profile.png",
+        "_profilePic":"/assets/img/user.png",
         "_banner": "/assets/img/services.jpg",
         "_about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
         "_job_list":[
@@ -450,61 +502,74 @@ export class CompanyDetailComponent implements OnInit {
             "Description":"Module handling"
           }
         ],
-        "_accomplishment":["English","Hindi"],
+        "_accomplishment":[
+          {
+            "language":["English","Hindi"]
+          },
+          {
+            "published":{
+              "job":"CEO",
+              "detail":"have traditionally included a variety of metadata in the response through"
+            }
+          }
+        ],
         "_coulleges_names":["Jhone", "Mark"],
         "_followers_name":["Jhon", "Milly"],
         "_following_companies":["abc pvt ltd", "google.com", "yahoo.in"],
         "_education":[
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Master of Computer Application (MCA), Information Technology",
             "_start_education": "2009",
             "_end_education": "2012"
           },
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Bachalore of Computer Application (BCA), Information Technology",
             "_start_education": "2006",
             "_end_education": "2009"
           },
           {
-            "_university_logo":"/assets/img/default-logo.png",
+            "_university_logo":"/assets/img/folder.png",
             "_university_name":"Maharishi Dayanand University",
             "_course_name": "Sinor Secondary, Education",
             "_start_education": "2004",
             "_end_education": "2006"
           }
         ],
-        "_interest":[{
-            "_logo":"/assets/img/default-logo.png",
+        "_interest":[
+          {
+            "_logo":"/assets/img/like.png",
             "_name":"Wipro Limited",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"LinkedIn",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Deloitte",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"SAP",
             "_followers_count":"2,202,033"
           },
           {
-            "_logo":"/assets/img/default-logo.png",
+            "_logo":"/assets/img/like.png",
             "_name":"Cisco",
             "_followers_count":"2,202,033"
           }],
-        "_social_profiles":[{"facebook":"facebook.com"}, 
+        "_social_profiles":[
+          {"facebook":"facebook.com"}, 
           {"yahoo":"yahoo.com"},
-          {"instagram":"instagram"}],
+          {"instagram":"instagram"}
+        ],
         "_connection":["Google", "Yahoo", ""],
         "_active_companies":[""],
         "_profile_status":true
