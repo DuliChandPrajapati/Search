@@ -9,7 +9,10 @@ import { filter, map } from 'rxjs/operators';
 })
 export class PersonDetailComponent implements OnInit {
 public personData : any;
-constructor(private router:Router) { }
+public companyList : any;
+constructor(private router:Router) {
+  this.companyList = JSON.parse(localStorage.getItem('companies'));
+ }
 
   ngOnInit() {
     if(history.state.navigationId == 1){

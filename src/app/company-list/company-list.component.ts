@@ -396,6 +396,7 @@ export class CompanyListComponent implements OnInit {
   private loadEmployee() {
     this.companylist = this.companylistData;
     this.totalRec = this.companylist.length;
+    localStorage.setItem('companies', JSON.stringify(this.companylist));
   }
 
 }
