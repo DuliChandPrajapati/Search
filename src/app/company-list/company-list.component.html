@@ -3,7 +3,7 @@
   ============================-->
 <section id="get-started" class="padd-section wow fadeInUp">
 
-    <div class="container">
+    <div class="container" *ngIf="companylist && companylist.length > 0">
         <div class="section-title-2">
             <h3 class="resultSearch">Companies - {{companylist.length}}</h3>
 
@@ -24,7 +24,7 @@
 
                     <h4>{{company._name}}</h4>
                     <p>{{company._about}}</p>
-                    <a [routerLink]="['/companydetail']" [state]="company">read more</a>
+                    <a [routerLink]="['/companydetail',company._id]" [state]="company">read more</a>
 
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<section id="get-started" class="padd-section wow fadeInUp">
+<section id="get-started" class="padd-section wow fadeInUp" *ngIf="companyData">
     <div class="container">
         <div class="row background">
             <div class="col-12 features">
@@ -91,7 +91,7 @@
                                         <p>{{person._about}}</p>
                                     </div>
                                     <div class="col-12 topBoorder">
-                                        <a [routerLink]="['/personDetail']" [state]="person">Connect</a>
+                                        <a [routerLink]="['/personDetail',person._id]" [state]="person">Connect</a>
                                     </div>
                                 </div>
                             </div>

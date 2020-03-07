@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { filter, map } from 'rxjs/operators';
-
+import { Router, ActivatedRoute } from '@angular/router';
+import { filter, map, mergeMap } from 'rxjs/operators';
+import { PersonService, ArticleService, SearchService } from '@app/_services';
+import { forkJoin } from 'rxjs';
 @Component({
   selector: 'app-person-detail',
   templateUrl: './person-detail.component.html',
@@ -10,17 +11,42 @@ import { filter, map } from 'rxjs/operators';
 export class PersonDetailComponent implements OnInit {
 public personData : any;
 public companyList : any;
-constructor(private router:Router) {
+loading;
+error='';
+lastsegment;
+constructor(private router:Router, private _Pservice:PersonService, private _service:SearchService) {
   this.companyList = JSON.parse(localStorage.getItem('companies'));
  }
 
   ngOnInit() {
-    if(history.state.navigationId == 1){
-      this.personData = JSON.parse(localStorage.getItem('personState'));
-    }else{
-      localStorage.setItem('personState', JSON.stringify(history.state));
-      this.personData  = history.state;
-    }
+
+    var array = this.router.url.split('/');
+    this.lastsegment = array[array.length-1];
+    this._Pservice.getById(this.lastsegment)
+        .pipe(map(person =>{
+          this.personData = person['data'].doc;
+        }),
+        mergeMap(data =>{
+          const company = this._service.getAll()
+          .pipe()
+          .subscribe(
+            personData => {
+                this.companyList = personData['data'].data;
+              },
+              error => {
+                  this.error = error;
+                  this.loading = false;
+              });
+          return forkJoin([company]);
+        })
+        ).subscribe(
+          result => {
+              this.personData = result['data'].doc;
+            },
+            error => {
+                this.error = error;
+                this.loading = false;
+        });
   }
 
 }
