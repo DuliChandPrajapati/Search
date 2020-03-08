@@ -10,10 +10,9 @@
                     <div class="social-link">
                         <p>
                             <span class="social-title">Social -</span>
-                            <span><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></span>
-                            <span><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></span>
-                            <span><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></span>
-                            <span><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></span>
+                            <span class="social" *ngFor="let profile of personData._social_profiles; let i = index">
+                                <a href="{{profile.link}}"><i class="fa fa-{{profile.social_name}}" aria-hidden="true"></i></a>
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -30,6 +29,10 @@
                         <div class="col-12">
                             <div class="profile">
                                 <p>{{personData._about}}</p>
+                            </div>
+                            <div class="contact">
+                                <p>Mobile - <span class="bold" *ngFor="let mobile of personData._mobile">&nbsp; {{mobile}}</span></p>
+                                <p>Email - <span class="bold" *ngFor="let email of personData._email">&nbsp; {{email}}</span></p>
                             </div>
                         </div>
                     </div>

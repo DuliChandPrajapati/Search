@@ -11,10 +11,9 @@
                     <div class="social-link">
                         <p>
                             <span class="social-title">Social -</span>
-                            <span><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></span>
-                            <span><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></span>
-                            <span><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></span>
-                            <span><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></span>
+                            <span class="social" *ngFor="let profile of companyData._social_account; let i = index">
+                                <a href="{{profile.link}}"><i class="fa fa-{{profile.social_name}}" aria-hidden="true"></i></a>
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -48,7 +47,7 @@
                                             <p><span class="bold">Company size</span> : {{companyData._size}} </p>
                                             <p><span class="bold">Type</span> : {{companyData._website_url}}</p>
                                             <p><span class="bold">Founded</span> : {{companyData._founded}}</p>
-                                            <!-- <p><span class="bold">Specialties</span> : {{companyData._specialities}}</p> -->
+                                            <p><span class="bold">Specialties</span> : {{companyData._specialities}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -61,10 +60,14 @@
                             <div class="col-12 features">
                                 <h4>Locations</h4>
                                 <div class="row">
-                                    <div class="col-12">
+                                    <div class="col-12" *ngFor="let companyData of companyData._location">
                                         <div class="wow fadeInRight" data-wow-duration="0.5s">
-                                            <p>{{companyData._location.office_name}}</p>
-                                            <p>{{companyData._location.address}}</p>
+                                            <p><span class="bold">Type</span> - {{companyData.type}}</p>
+                                            <p><span class="bold">Office Name</span> - {{companyData.office_name}}</p>
+                                            <p><span class="bold">Address </span>- {{companyData.address}}</p>
+                                            <p><span class="bold">Contact No -</span>
+                                                <span *ngFor="let contact of companyData.contact">&nbsp;{{contact}}, &nbsp;</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
