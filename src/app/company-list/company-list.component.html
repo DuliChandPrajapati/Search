@@ -2,36 +2,47 @@
     Get Started Section
   ============================-->
 <section id="get-started" class="padd-section wow fadeInUp">
-
-    <div class="container" *ngIf="companylist && companylist.length > 0">
-        <div class="section-title-2">
-            <h3 class="resultSearch">Companies - {{companylist.length}}</h3>
-
-        </div>
-    </div>
-    <!-- <div class="sectionLine"></div> -->
-    <div class="container text-center">
+    <div class="container features" *ngIf="companylist && companylist.length > 0">
         <div class="row">
-
-            <div class="col-sm-12 col-lg-4" *ngFor="let company of companylist | paginate: { id: 'listing_pagination',
-            itemsPerPage: 10,
-            currentPage: page,
-            totalItems: totalRec }">
-                <div class="feature-block features">
-                    <div class="col-12 vendor">
-                        <img [src]="company._logo" alt="img" class="img-fluid">
-                    </div>
-
-                    <h4>{{company._name}}</h4>
-                    <p>{{company._about}}</p>
-                    <a [routerLink]="['/companydetail',company._id]" [state]="company">read more</a>
-
-                </div>
+            <div class="col-sm-12 col-lg-12">
+                <app-search></app-search>
             </div>
         </div>
+        <!-- <div class="section-title-2">
+            <h3 class="resultSearch">Companies - {{companylist.length}}</h3>
+        </div> -->
+    </div>
+    <div class="sectionLine"></div>
+    <div class="container features">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12 ">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-3 text-left" *ngFor="let company of companylist | paginate: { id: 'listing_pagination',
+                    itemsPerPage: 12,
+                    currentPage: page,
+                    totalItems: totalRec }">
+                        <a [routerLink]="['/companydetail',company._id]" [state]="company">
+                            <div class="feature-block">
+                                <div class="col-12 vendor">
+                                    <img [src]="company._logo" alt="img" class="img-fluid">
+                                </div>
+                                <div class="col-12">
+                                    <h4>{{company._name}}</h4>
+                                    <p>{{company._industry}}</p>
+                                </div>
+                                <div class="col-12">
+                                    <span class="count"><img src="/assets/img/{{company._size >1 ? 'multi':'one'}}.png" alt="count" class=""> Employees {{company._size}}+ </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-        <div class="col-12 text-right">
-            <pagination-controls id="listing_pagination" maxSize="3" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+        </div>
+
+        <div class="col-12 text-right pagging">
+            <pagination-controls id="listing_pagination" maxSize="6" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
         </div>
 
     </div>

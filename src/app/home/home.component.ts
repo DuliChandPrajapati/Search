@@ -27,7 +27,6 @@ export class HomeComponent {
     }
     companyList(){
         this._service.getAll().pipe(first()).subscribe(list => {
-            console.log("list", list);
             this.loading = false;
         },error=>{
             this.error = error;

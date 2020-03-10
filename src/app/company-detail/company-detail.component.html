@@ -3,19 +3,41 @@
         <div class="row background">
             <div class="col-12 features">
                 <div class="company-profile ">
-                    <div class="bannerBg"><img [src]="companyData._banner" style="width: 100%;"></div>
-                    <div class="cricle"><img [src]="companyData._logo" alt="img" class="img-fluid"></div>
-                    <h4>{{companyData._name}}</h4>
-                    <p>{{companyData._about}}</p>
-                    <p><span>Connection : +{{companyData._size}}</span></p>
-                    <div class="social-link">
-                        <p>
-                            <span class="social-title">Social -</span>
-                            <span class="social" *ngFor="let profile of companyData._social_account; let i = index">
-                                <a href="{{profile.link}}"><i class="fa fa-{{profile.social_name}}" aria-hidden="true"></i></a>
-                            </span>
-                        </p>
+                    <div class="bannerBg"><img [src]="companyData._banner" style="width: 100%;height: 235px;"></div>
+                    <div class="square">
+                        <img [src]="companyData._logo" alt="img" class="img-fluid">
+                        <div class="detail_box">
+                            <h4>{{companyData._name}}</h4>
+                            <p>
+                                <span>{{companyData._type}} </span> :
+                                <span>{{companyData._founded}} </span> :
+                                <span>Connection : +{{companyData._size}}</span>
+                            </p>
+                        </div>
                     </div>
+                    <div class="company-detail">
+                        <p>{{companyData._specialities}}</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="follow">
+                                    <a href="{{companyData._website_url}}">Visit Website <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-6 text-right">
+                                <div class="social-link">
+                                    <p>
+                                        <span class="social-title">Follow -</span>
+                                        <span class="social" *ngFor="let profile of companyData._social_account; let i = index">
+                                            <a href="{{profile.link}}"><i class="fa fa-{{profile.social_name}}" aria-hidden="true"></i></a>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -37,17 +59,26 @@
                     <div class="container">
                         <div class="row background">
                             <div class="col-12 features">
-                                <h4>Overview</h4>
+                                <h4 class="overview-detail">Overview</h4>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="wow fadeInRight profile" data-wow-duration="0.5s">
                                             <p>{{companyData._about}}</p>
-                                            <p><span class="bold">Website</span> : {{companyData._website_url}}</p>
-                                            <p><span class="bold">Industry</span> : {{companyData._industry}}</p>
-                                            <p><span class="bold">Company size</span> : {{companyData._size}} </p>
-                                            <p><span class="bold">Type</span> : {{companyData._website_url}}</p>
-                                            <p><span class="bold">Founded</span> : {{companyData._founded}}</p>
-                                            <p><span class="bold">Specialties</span> : {{companyData._specialities}}</p>
+                                            <div class="row">
+                                                <div class="col-4"><span class="bold">Website</span></div>
+                                                <div class="col-8 bold">:<a href="{{companyData._website_url}}"> {{companyData._website_url}}</a></div>
+                                                <div class="col-4"><span class="bold">Industry</span></div>
+                                                <div class="col-8">: {{companyData._industry}}</div>
+                                                <div class="col-4"><span class="bold">Company size</span></div>
+                                                <div class="col-8"> : {{companyData._size}} </div>
+                                                <div class="col-4"><span class="bold">Company Type</span></div>
+                                                <div class="col-8">: {{companyData._website_url}}</div>
+                                                <div class="col-4"><span class="bold">Founded</span></div>
+                                                <div class="col-8">: {{companyData._founded}}</div>
+                                                <div class="col-4"><span class="bold">Specialties</span></div>
+                                                <div class="col-8"> : {{companyData._specialities}}</div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -58,16 +89,20 @@
                     <div class="container">
                         <div class="row background">
                             <div class="col-12 features">
-                                <h4>Locations</h4>
+                                <h4 class="overview-detail">Locations</h4>
                                 <div class="row">
                                     <div class="col-12" *ngFor="let companyData of companyData._location">
-                                        <div class="wow fadeInRight" data-wow-duration="0.5s">
-                                            <p><span class="bold">Type</span> - {{companyData.type}}</p>
-                                            <p><span class="bold">Office Name</span> - {{companyData.office_name}}</p>
-                                            <p><span class="bold">Address </span>- {{companyData.address}}</p>
-                                            <p><span class="bold">Contact No -</span>
-                                                <span *ngFor="let contact of companyData.contact">&nbsp;{{contact}}, &nbsp;</span>
-                                            </p>
+                                        <div class="wow fadeInRight profile" data-wow-duration="0.5s">
+                                            <div class="row">
+                                                <div class="col-4"><span class="bold">Type</span></div>
+                                                <div class="col-8">: {{companyData.type}}</div>
+                                                <div class="col-4"><span class="bold">Office Name</span></div>
+                                                <div class="col-8">: {{companyData.office_name}}</div>
+                                                <div class="col-4"><span class="bold">Address</span></div>
+                                                <div class="col-8"> : {{companyData.address}} </div>
+                                                <div class="col-4"><span class="bold">Contact No</span></div>
+                                                <div class="col-8">: <span *ngFor="let contact of companyData.contact">&nbsp;{{contact}}, &nbsp;</span></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -79,37 +114,41 @@
                     <div class="container features">
                         <div class="row background">
                             <div class="col-12 shadow-none">
-                                <h4>Employees</h4>
+                                <h4 class="overview-detail">Employees</h4>
                             </div>
-                            <div class="col-lg-4 col-sm-12" *ngFor="let person of personList | paginate: { id: 'listing_pagination',
-                            itemsPerPage: 3,
+                            <div class="col-sm-12 col-lg-3 text-center" *ngFor="let person of personList | paginate: { id: 'listing_pagination',
+                            itemsPerPage: 4,
                             currentPage: page,
                             totalItems: totalRec }">
-                                <div class="border text-center">
-                                    <div class="col-12 vendor">
-                                        <img [src]="person._profilePic" alt="img" class="img-fluid">
+                                <a [routerLink]="['/personDetail',person._id]" [state]="person">
+                                    <div class="border text-center">
+                                        <div class="col-12 person">
+                                            <div class="row">
+                                                <img [src]="person._banner" alt="banner" class="img-fluid banner">
+                                                <span *ngIf="person._profilePic == ''" class="img-profile"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                                                <img *ngIf="person._profilePic != ''" [src]="person._profilePic" alt="img" class="img-profile img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 person-detail">
+                                            <h4>{{person._name}}</h4>
+                                            <p>{{person._current_designation}}</p>
+                                            <p>{{person._location}}</p>
+                                        </div>
                                     </div>
-                                    <div class="col-12">
-                                        <h4>{{person._name}}</h4>
-                                        <p>{{person._about}}</p>
-                                    </div>
-                                    <div class="col-12 topBoorder">
-                                        <a [routerLink]="['/personDetail',person._id]" [state]="person">Connect</a>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
-                            <div class="col-12 text-right">
-                                <pagination-controls id="listing_pagination" maxSize="3" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+                            <div class="sectionLine"></div>
+                            <div class="col-12 text-right pagging">
+                                <pagination-controls id="listing_pagination" maxSize="6" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="tab-pane fade features" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                     <div class="container">
                         <div class="row background">
                             <div class="col-12 " *ngFor="let article of companyArticle | paginate: { id: 'listing_pagination',
-                            itemsPerPage: 3,
+                            itemsPerPage: 4,
                             currentPage: page,
                             totalItems: totalRec }">
                                 <div class="articles border-bottom">

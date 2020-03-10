@@ -21,7 +21,8 @@ import { CompanyListComponent } from './company-list/company-list.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './contact/contact.component';;
+import { SearchComponent } from './_shared/search/search.component'
 @NgModule({
     imports: [
         BrowserModule,
@@ -44,6 +45,8 @@ import { ContactComponent } from './contact/contact.component';
         PersonDetailComponent,
         ContactComponent,
         AboutComponent
+,
+        SearchComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
