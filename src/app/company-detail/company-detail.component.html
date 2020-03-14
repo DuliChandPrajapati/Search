@@ -1,39 +1,40 @@
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+    <p style="color: white">Please Wait. </p>
+</ngx-spinner>
 <section id="get-started" class="padd-section wow fadeInUp" *ngIf="companyData">
-    <div class="container">
+    <div class="container marginSearch">
         <div class="row background">
             <div class="col-12 features">
                 <div class="company-profile ">
-                    <div class="bannerBg"><img [src]="companyData._banner" style="width: 100%;height: 235px;"></div>
+                    <div class="bannerBg"><img [src]="companyData._banner" style="width: 100%;max-height: 235px;"></div>
                     <div class="square">
                         <img [src]="companyData._logo" alt="img" class="img-fluid">
                         <div class="detail_box">
                             <h4>{{companyData._name}}</h4>
                             <p>
                                 <span>{{companyData._type}} </span> :
-                                <span>{{companyData._founded}} </span> :
-                                <span>Connection : +{{companyData._size}}</span>
+                                <span>{{companyData._founded}} </span>
                             </p>
+                            <p> <span>Connection : +{{companyData._size}}</span></p>
                         </div>
                     </div>
                     <div class="company-detail">
-                        <p>{{companyData._specialities}}</p>
+                        <p>{{companyData._specialities}} DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option to the Mngine,
+                            pass option to the MongoClient constructor.</p>
                     </div>
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="follow">
-                                    <a href="{{companyData._website_url}}">Visit Website <i class="fa fa-external-link" aria-hidden="true"></i></a>
-                                </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="follow">
+                                <a href="{{companyData._website_url}}">Visit Website <i class="fa fa-external-link" aria-hidden="true"></i></a>
                             </div>
-                            <div class="col-6 text-right">
-                                <div class="social-link">
-                                    <p>
-                                        <span class="social-title">Follow -</span>
-                                        <span class="social" *ngFor="let profile of companyData._social_account; let i = index">
+                        </div>
+                        <div class="col-6 text-right">
+                            <div class="social-link">
+                                <p>
+                                    <span class="social" *ngFor="let profile of companyData._social_account; let i = index">
                                             <a href="{{profile.link}}"><i class="fa fa-{{profile.social_name}}" aria-hidden="true"></i></a>
                                         </span>
-                                    </p>
-                                </div>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -116,29 +117,25 @@
                             <div class="col-12 shadow-none">
                                 <h4 class="overview-detail">Employees</h4>
                             </div>
-                            <div class="col-sm-12 col-lg-3 text-center" *ngFor="let person of personList | paginate: { id: 'listing_pagination',
+                            <div class="col-sm-3 col-md-3 col-lg-3 marginBox text-center" *ngFor="let person of personList | paginate: { id: 'listing_pagination',
                             itemsPerPage: 4,
                             currentPage: page,
                             totalItems: totalRec }">
                                 <a [routerLink]="['/personDetail',person._id]" [state]="person">
-                                    <div class="border text-center">
-                                        <div class="col-12 person">
-                                            <div class="row">
-                                                <img [src]="person._banner" alt="banner" class="img-fluid banner">
-                                                <span *ngIf="person._profilePic == ''" class="img-profile"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                                                <img *ngIf="person._profilePic != ''" [src]="person._profilePic" alt="img" class="img-profile img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 person-detail">
-                                            <h4>{{person._name}}</h4>
-                                            <p>{{person._current_designation}}</p>
-                                            <p>{{person._location}}</p>
+                                    <div class="card person">
+                                        <img class="card-img-top" [src]="person._banner" alt="Card image cap">
+                                        <img *ngIf="person._profilePic == ''" src="/assets/img/user.png" alt="img" class="img-profile img-fluid">
+                                        <img *ngIf="person._profilePic != ''" [src]="person._profilePic" alt="img" class="img-profile img-fluid">
+                                        <div class="card-body">
+                                            <h4 class="card-text">{{person._name}}</h4>
+                                            <p class="card-text">{{person._current_designation}}</p>
+                                            <p class="card-text">{{person._location}}</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                             <div class="sectionLine"></div>
-                            <div class="col-12 text-right pagging">
+                            <div class="col-12 text-left pagging">
                                 <pagination-controls id="listing_pagination" maxSize="6" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
                             </div>
                         </div>
@@ -151,21 +148,32 @@
                             itemsPerPage: 4,
                             currentPage: page,
                             totalItems: totalRec }">
-                                <div class="articles border-bottom">
+                                <div class="articles">
                                     <!-- <span class="articleNumber"></span> -->
                                     <div class="row">
-                                        <div class="col-12">
-                                            <h4>{{article._event_name}}
+                                        <div class="col-12 marginBox">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{article._event_name}}</h5>
+                                                    <h6 class="card-subtitle mb-2 text-muted">{{article._published_date}}</h6>
+                                                    <img [src]="article._image" style="width:100%">
+                                                    <p class="card-text">{{article._description}}</p>
+                                                    <!-- <a href="#" class="card-link">Card link</a> -->
+                                                    <!-- <a href="#" class="card-link">Another link</a> -->
+                                                </div>
+                                            </div>
+                                            <!-- <h4>{{article._event_name}}
                                                 <div class="publish_date">{{article._published_date}}</div>
                                             </h4>
                                             <p>{{article._description}}</p>
-                                            <img [src]="article._image" style="width: 100%;">
+                                            <img [src]="article._image" style="width: 100%;"> -->
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
-                            <div class="col-12 text-right">
+                            <div class="sectionLine"></div>
+                            <div class="col-12 text-left pagging">
                                 <pagination-controls id="listing_pagination" maxSize="3" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
                             </div>
                         </div>

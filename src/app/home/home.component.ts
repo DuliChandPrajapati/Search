@@ -1,6 +1,6 @@
 ﻿import { Component } from '@angular/core';
 import { first } from 'rxjs/operators';
-
+import { NgxSpinnerService } from "ngx-spinner";  
 
 import { User } from '@app/_models';
 import { UserService, AuthenticationService,SearchService } from '@app/_services';
@@ -17,20 +17,22 @@ export class HomeComponent {
         private userService: UserService,
         private router:Router,
         private authenticationService: AuthenticationService,
-        private _service:SearchService
+        private _service:SearchService,
+        private SpinnerService: NgxSpinnerService
     ) {
         this.currentUser = this.authenticationService.currentUserValue;
     }
 
     ngOnInit() {
-        this.loading = true;
+        this.companyList()
     }
     companyList(){
+        this.SpinnerService.show();
         this._service.getAll().pipe(first()).subscribe(list => {
-            this.loading = false;
+            this.SpinnerService.hide();  
         },error=>{
             this.error = error;
-            this.loading = false;
+            this.SpinnerService.hide();
         });
     }
     searchCompanyData(){

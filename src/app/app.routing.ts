@@ -15,7 +15,7 @@ const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path: 'admin',
@@ -30,17 +30,17 @@ const routes: Routes = [
     {
         path:'companylist',
         component:CompanyListComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path:'companydetail/:id',
         component:CompanyDetailComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path:'personDetail/:id',
         component:PersonDetailComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path:'about',
@@ -54,7 +54,7 @@ const routes: Routes = [
     },
 
     // otherwise redirect to home
-    { path: '**', redirectTo: '/login' }
+    { path: '**', redirectTo: '/' }
 ];
 
 export const appRoutingModule = RouterModule.forRoot(routes);

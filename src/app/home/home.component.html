@@ -15,23 +15,20 @@
 <!--==========================
     Get Started Section
   ============================-->
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+    <p style="color: white">Please Wait. </p>
+</ngx-spinner>
 <section id="get-started" class="padd-section text-center wow fadeInUp">
-
     <div class="container section-title">
-        <!-- <div class="section-title text-center">
-
-            <h2>Welcome To : Company Search </h2>
-            <p class="separator">Search your business links here</p>
-
-        </div> -->
         <section id="newsletter" class="newsletter text-center wow fadeInUp">
             <!-- <div class="padd-section"> -->
-            <div class="container">
+            <div class="container margin-top">
                 <div class="row justify-content-center">
                     <div class="col-md-12 col-lg-8">
                         <form name="home" class="form-inline">
-                            <input type="email" class="form-control" (click)="companyList()" placeholder="Search here your company result" name="email">
-                            <button type="submit" class="btn btn-default" (click)="searchCompanyData()">Search</button>
+                            <label class="labelClass">Search with company name</label>
+                            <input type="email" class="form-control" (click)="companyList()" placeholder="" name="email">
+                            <button type="submit" class="btn btn-default" (click)="searchCompanyData()"><i class="fa fa-search"></i></button>
                             <!-- <i class="fa fa-search"></i> -->
 
                         </form>

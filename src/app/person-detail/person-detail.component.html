@@ -1,9 +1,12 @@
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+    <p style="color: white">Please Wait. </p>
+</ngx-spinner>
 <section id="get-started" class="padd-section wow fadeInUp" *ngIf="personData">
-    <div class="container">
+    <div class="container marginSearch">
         <div class="row background">
             <div class="col-12 features">
                 <div class="company-profile ">
-                    <div class="bannerBg"><img [src]="personData._banner" style="width: 100%;height: 235px;"></div>
+                    <div class="bannerBg"><img [src]="personData._banner" style="width: 100%;max-height: 235px;"></div>
                     <div class="square">
                         <img [src]="personData._profilePic ? personData._profilePic : '/assets/img/default-logo.png' " alt="img" class="img-fluid">
                         <div class="detail_box">
@@ -11,33 +14,30 @@
                             <p>
                                 <span>{{personData._current_designation}} </span> :
                                 <span>{{personData._location}} </span> :
-                                <span>Connection : +{{personData._followers_name.length}}</span>
+
                             </p>
+                            <p> <span>Connection : +{{personData._followers_name.length}}</span></p>
                         </div>
                     </div>
                     <div class="company-detail">
                         <p>{{personData._specialities}}</p>
                     </div>
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="col-12">
-                                    <span class="count"><img src="/assets/img/{{personData._followers_name.length >1 ? 'multi':'one'}}.png" alt="count" class=""> Followers : {{personData._followers_name.length}}+ </span>
-                                </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="col-12">
+                                <span class="count"><img src="/assets/img/{{personData._followers_name.length >1 ? 'multi':'one'}}.png" alt="count" class=""> Followers : {{personData._followers_name.length}}+ </span>
                             </div>
-                            <div class="col-6 text-right">
-                                <div class="social-link">
-                                    <p>
-                                        <span class="social-title">Follow -</span>
-                                        <span class="social" *ngFor="let profile of personData._social_profiles; let i = index">
+                        </div>
+                        <div class="col-6 text-right">
+                            <div class="social-link">
+                                <p>
+                                    <span class="social" *ngFor="let profile of personData._social_profiles; let i = index">
                                             <a href="{{profile.link}}"><i class="fa fa-{{profile.social_name}}" aria-hidden="true"></i></a>
                                         </span>
-                                    </p>
-                                </div>
+                                </p>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -70,15 +70,19 @@
             <div class="col-12 features">
                 <div class="wow fadeInRight" data-wow-duration=" 0.5s ">
                     <h4 class="overview-detail">Experience</h4>
-                    <div class="row " *ngFor="let jobs of personData._job_list ">
-                        <div class="col-1 "><img [src]="jobs.company_logo" alt="img " class="img-fluid imgBox"></div>
-                        <div class="col-11 border-bottom">
-                            <p class="bold ">{{jobs.profile_heading}}</p>
-                            <p>Dates Employed : {{jobs.start_date}} – {{jobs.end_date}}</p>
-                            <p>Employment Duration : 4 yrs 5 mos</p>
-                            <p>Location : {{jobs.location}}</p>
-                            <p>Skills : {{jobs.skill}}</p>
-                            <p>Description : {{jobs.location}}</p>
+                    <div class="row" *ngFor="let jobs of personData._job_list ">
+                        <div class="col-12">
+                            <ul class="interest ">
+                                <li><img [src]="jobs.company_logo" alt="img " class="img-fluid imgBox"></li>
+                                <li class="border-bottom">
+                                    <p class="bold ">{{jobs.profile_heading}}</p>
+                                    <p>Dates Employed : {{jobs.start_date}} – {{jobs.end_date}}</p>
+                                    <p>Employment Duration : 4 yrs 5 mos</p>
+                                    <p>Location : {{jobs.location}}</p>
+                                    <p>Skills : {{jobs.skill}}</p>
+                                    <p>Description : {{jobs.location}}</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -92,12 +96,16 @@
                 <div class="wow fadeInRight" data-wow-duration=" 0.5s">
                     <h4 class="overview-detail">Education</h4>
                     <div class="row " *ngFor="let education of personData._education ">
-                        <div class="col-1 "><img [src]="education._university_logo" alt="img " class="img-fluid imgBox"></div>
-                        <div class="col-11 border-bottom">
-                            <p class="bold ">{{education._university_name}}</p>
-                            <p>{{education._university_name}}</p>
-                            <p>{{education._course_name}}</p>
-                            <p>{{education._start_education}} - {{education._end_education}}</p>
+                        <div class="col-12">
+                            <ul class="interest ">
+                                <li><img [src]="education._university_logo" alt="img " class="img-fluid imgBox"></li>
+                                <li class="border-bottom">
+                                    <p class="bold ">{{education._university_name}}</p>
+                                    <p>{{education._university_name}}</p>
+                                    <p>{{education._course_name}}</p>
+                                    <p>{{education._start_education}} - {{education._end_education}}</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -111,30 +119,19 @@
             <div class="col-12 features ">
                 <div class="wow fadeInRight" data-wow-duration=" 0.5s">
                     <h4 class="overview-detail">Accomplishments</h4>
-                    <!-- <div class="row" *ngFor="let accomp of personData._accomplishment | keyvalue">
-                        main {{accomp.value | json}} change - {{accomp.keyvalue}}
-                        <div class="col-1 "><img src="/assets/img/document.png " alt="img " class="img-fluid imgBox"></div>
-                        <div class="col-11" *ngFor="let accompObj of accomp.value  | keyvalue">
-                            {{accompObj.value | json}}
-                        </div>
-
-                    </div> -->
                     <div class="row ">
-                        <div class="col-1 "><img src="/assets/img/document.png " alt="img " class="img-fluid imgBox"></div>
-                        <div class="col-11 border-bottom">
-                            <p class="bold ">Language</p>
-                            <p>
-                                <span *ngFor="let accomp of personData._accomplishment">
+                        <div class="col-12">
+                            <ul class="interest ">
+                                <li><img src="/assets/img/document.png " alt="img " class="img-fluid imgBox"></li>
+                                <li class="border-bottom">
+                                    <p class="bold ">Language</p>
+                                    <p>
+                                        <span *ngFor="let accomp of personData._accomplishment">
                                     <span *ngFor="let language of accomp.language"> {{language}}</span>
-                                </span>
-                            </p>
-                            <!-- <div class="sectionLine "></div>
-                            <p class="bold ">Published</p>
-                            <p>{{personData._accomplishment.published['job']}}</p> -->
-                            <!-- <p> <span *ngFor="let accompdata of personData._accomplishment">
-                                    <span *ngFor="let publish of accompdata.published"> </span>
-                                </span>
-                            </p> -->
+                                        </span>
+                                    </p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -188,8 +185,8 @@
                     </div>
                 </a>
             </div>
-            <div class="col-12 text-right pagging">
-                <pagination-controls id="listing_pagination" maxSize="6" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+            <div class="col-12 text-left pagging">
+                <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
             </div>
         </div>
     </div>

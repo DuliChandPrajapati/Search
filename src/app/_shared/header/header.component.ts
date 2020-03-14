@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
     }
 
   ngOnInit() {
-    this.loginState = JSON.parse(localStorage.getItem('currentUser'));
+    this.loginState = JSON.parse(localStorage.getItem('currentUser')) ||  true;
   }
 
   logout() {

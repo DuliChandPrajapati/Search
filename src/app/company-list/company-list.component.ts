@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { SearchService } from '@app/_services';
+import { NgxSpinnerService } from "ngx-spinner";  
 @Component({
   selector: 'app-company-list',
   templateUrl: './company-list.component.html',
@@ -15,21 +16,23 @@ export class CompanyListComponent implements OnInit {
   loading = false;
   error = '';
 
-  constructor(private router:Router, private _service:SearchService) {
+  constructor(private router:Router, private _service:SearchService,
+    private SpinnerService: NgxSpinnerService) {
    
    }
 
   ngOnInit() {
-    this.loading = true;
+    this.SpinnerService.show();
     this._service.getAll()
         .pipe()
         .subscribe(
             compaies => {
                 this.companylist = compaies['data'].data;
+                this.SpinnerService.hide();
             },
             error => {
                 this.error = error;
-                this.loading = false;
+                this.SpinnerService.hide();
             });
   }
 
